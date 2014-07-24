@@ -1,0 +1,10 @@
+Universidad del Valle de Guatemala
+Algoritmos y Estructura de Datos
+
+Integrantes del Grupo:
+    Andrea Barrera         13655
+    Otto Wantland          13663
+    Diego Rodriguez        13111
+
+Link para GitHub:
+    https://github.com/aisbarrera/hoja2
