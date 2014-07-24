@@ -25,14 +25,13 @@ public class Calculadora
 	//Separa los datos del texto ingresado en partes para almacenar en la pila
 	public void guardar()
 	{
-		String [] cadenas = datos.split("// "); //Separa la cadena en cada espacio vacio que encuentra
-		int i = datos.length() -1 ; 
-		while (i >= 0) //Asigna cada uno de los datos de la cadena en el stack
-		{
-			miVector.push(cadenas[i]);
-			i--;
-		}
-	}
+            String[] elementos = datos.split("\\s+");
+            int i = elementos.length - 1;
+            while(i>=0){
+                    miVector.push(elementos[i]);
+                    i--;
+            }
+    }
 	
 	public int operaciones()
 	{

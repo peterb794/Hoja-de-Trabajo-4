@@ -15,9 +15,9 @@ public class Archivo
 
     //Constructor
     //Busca el archivo y prepara un filereader y bufferreader para poder transformarlo a String
-    public Archivo(String calculos)
+    public Archivo(String texto)
     {
-            archivo = new File(calculos+".txt");
+            archivo = new File(texto+".txt");
             if(!archivo.exists())
             {
                     System.out.print("El archivo no se encuentra");
@@ -45,10 +45,10 @@ public class Archivo
             String datos = new String("");
             try
             {
-                    String ScurrentLine;
-                    while((ScurrentLine=br.readLine())!=null)
+                    String SLine;
+                    while((SLine=br.readLine())!=null)
                     {
-                            datos = ScurrentLine;
+                            datos = SLine;
                     }
                     fr.close();
             }
