@@ -25,12 +25,6 @@ public class StackArrayList<E> extends AbstractStack<E> {
     public E peek() {
         return data.get(size() - 1);
     }
-
-    @Override
-    public boolean empty() {
-        return size() == 0;
-    }
-
     @Override
     public int size() {
         return data.size();

@@ -1,12 +1,9 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- *
- * @author andreabarrera
- */
+/* Andrea Barrera 13655, Peter Benett 13243 */
+/* Seccion 20                               */
+/* Hoja de trabajo 4                        */
 public abstract class AbstractStack<E> implements Stack<E> {
     
+    public boolean empty() {
+        return size() == 0;
+    }
 }
