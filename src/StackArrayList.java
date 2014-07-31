@@ -7,6 +7,7 @@ import java.util.ArrayList;
 public class StackArrayList<E> extends AbstractStack<E> {
     
     protected ArrayList<E> data;
+    
 
     public StackArrayList(){
 	data = new ArrayList<E>();
@@ -19,6 +20,7 @@ public class StackArrayList<E> extends AbstractStack<E> {
 
     @Override
     public E pop() {
+        System.out.println("hola andrea");
         return data.remove(size()-1);
     }
 
