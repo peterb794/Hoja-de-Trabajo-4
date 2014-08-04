@@ -3,6 +3,7 @@
 /* Hoja de trabajo 4                        */
 public abstract class AbstractStack<E> implements Stack<E> {
     
+    @Override
     public boolean empty() {
         return size() == 0;
     }

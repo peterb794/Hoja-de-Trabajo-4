@@ -20,7 +20,6 @@ public class StackArrayList<E> extends AbstractStack<E> {
 
     @Override
     public E pop() {
-        System.out.println("hola andrea");
         return data.remove(size()-1);
     }
 
