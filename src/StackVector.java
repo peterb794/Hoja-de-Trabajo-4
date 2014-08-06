@@ -1,6 +1,6 @@
 import java.util.Vector;
 
-public class StackVector<E> implements Stack<E> 
+public class StackVector<E> extends AbstractStack<E> 
 {
 	protected Vector<E> data;
 
@@ -36,11 +36,5 @@ public class StackVector<E> implements Stack<E>
 	// post: returns the number of elements in the stack
 	{
 		return data.size();
-	}
-  
-	public boolean empty()
-	// post: returns true if and only if the stack is empty
-	{
-		return size() == 0;
 	}
 }

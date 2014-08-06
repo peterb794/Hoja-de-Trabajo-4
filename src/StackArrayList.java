@@ -4,7 +4,7 @@
 
 import java.util.ArrayList;
 
-public class StackArrayList<E> extends abstractStack<E> {
+public class StackArrayList<E> extends AbstractStack<E> {
     
     protected ArrayList<E> data;
     
@@ -31,5 +31,5 @@ public class StackArrayList<E> extends abstractStack<E> {
     public int size() {
         return data.size();
     }
-    
+      
 }
