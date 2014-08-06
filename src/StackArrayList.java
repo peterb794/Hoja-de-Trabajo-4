@@ -4,7 +4,7 @@
 
 import java.util.ArrayList;
 
-public class StackArrayList<E> extends AbstractStack<E> {
+public class StackArrayList<E> extends abstractStack<E> {
     
     protected ArrayList<E> data;
     
