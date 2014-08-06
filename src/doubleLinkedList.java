@@ -29,18 +29,6 @@ public void addFirst(E value)
    count++;
 }
 
-
-public void addLast(E value)
-// pre: value is not null
-// post: adds new value to tail of list
-{
-   // construct new element
-   tail = new DoublyLinkedNode<E>(value, null, tail);
-   // fix up head
-   if (head == null) head = tail;
-   count++;
-}
-
 public E getFirst()
   // pre: list is not empty
   // post: returns first value in list
@@ -48,24 +36,4 @@ public E getFirst()
       return head.value();
   }
 
-public E getLast(){
-    return tail.value();
-}
-
-public E removeFirst(){
-    DoublyLinkedNode<E> temp = tail;
-    tail.setNext(null);
-    count--;
-    return temp.value();
-}
-public E removeLast()
-// pre: list is not empty
-// post: removes value from tail of list
-{
-   DoublyLinkedNode<E> temp = tail;
-   tail = tail.previous();
-   tail.setNext(null);
-   count--;
-   return temp.value();
-}
 }

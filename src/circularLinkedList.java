@@ -40,50 +40,9 @@ public void addFirst(E value)
    count++;
 }
 
-
-public void addLast(E value)
-// pre: value non-null
-// post: adds element to tail of list
-{
-   // new entry:
-   addFirst(value);
-   tail = tail.next();
-}
-
-@Override
-public E removeLast()
-// pre: !isEmpty()
-// post: returns and removes value from tail of list
-{
-   Node<E> finger = tail;
-   while (finger.next() != tail) {
-       finger = finger.next();
-   }
-   // finger now points to second-to-last value
-   Node<E> temp = tail;
-   if (finger == tail)
-   {
-       tail = null;
-   } else {
-       finger.setNext(tail.next());
-       tail = finger;
-   }
-   count--;
-   return temp.value();
-}
-
     @Override
     public E getFirst() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    @Override
-    public E getLast() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public E removeFirst() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 }
