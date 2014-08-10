@@ -14,7 +14,7 @@ import static org.junit.Assert.*;
  *
  * @author andreabarrera
  */
-public class StackListTest {
+public class StackListTest<E> {
     
     public StackListTest() {
     }
@@ -41,9 +41,8 @@ public class StackListTest {
     @Test
     public void testPush() {
         System.out.println("push");
-        Object item = "andrea";
-        StackList instance = new StackList();
-        int num = 1;
+        String item = "andrea";
+        StackList<String> instance = new StackList();
         instance.push(item);
         System.out.println(instance.pop());
         // TODO review the generated test code and remove the default call to fail.
@@ -57,7 +56,6 @@ public class StackListTest {
     public void testPop() {
         System.out.println("pop");
         StackList instance = new StackList();
-        int num = 1;
         instance.push("1");
         Object expResult = "1";
         Object result = instance.pop();
