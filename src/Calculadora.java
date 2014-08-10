@@ -30,22 +30,22 @@ public class Calculadora {
 			dato1 = Integer.parseInt((String) miStack.pop());
 			dato2 = Integer.parseInt((String) miStack.pop());
 			simbolo = (String) miStack.pop();
-			if (simbolo == "+")
+			if ("+".equals(simbolo))
 			{
 				resultado = dato1 + dato2;
 				miStack.push(resultado+"");
 			}
-			if (simbolo == "-")
+			if ("-".equals(simbolo))
 			{
 				resultado = dato1 - dato2;
 				miStack.push(resultado+"");
 			}
-			if (simbolo == "*")
+			if ("*".equals(simbolo))
 			{
 				resultado = dato1 * dato2;
 				miStack.push(resultado+"");
 			}
-			if (simbolo == "/")
+			if ("/".equals(simbolo))
 			{
 				resultado = dato1 / dato2;
 				miStack.push(resultado+"");
