@@ -17,21 +17,36 @@ import static org.junit.Assert.*;
  */
 public class AbstractStackTest {
     
+    /**
+     *
+     */
     public AbstractStackTest() {
     }
     
+    /**
+     *
+     */
     @BeforeClass
     public static void setUpClass() {
     }
     
+    /**
+     *
+     */
     @AfterClass
     public static void tearDownClass() {
     }
     
+    /**
+     *
+     */
     @Before
     public void setUp() {
     }
     
+    /**
+     *
+     */
     @After
     public void tearDown() {
     }
@@ -50,6 +65,9 @@ public class AbstractStackTest {
    
     }
 
+    /**
+     *
+     */
     public class AbstractStackImpl extends AbstractStack {
 
         @Override
