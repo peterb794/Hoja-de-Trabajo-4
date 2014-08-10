@@ -1,16 +1,11 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- *
- * @author andreabarrera
- */
+/* Andrea Barrera 13655, Peter Benett 13243 */
+/* Seccion 20                               */
+/* Hoja de trabajo 4                        */
 public class circularLinkedList<E> extends AbstractList<E> {
 
 protected Node<E> tail; 
 protected int count;
+private E ne;
 
 public circularLinkedList()
 // pre: constructs a new circular list
@@ -19,17 +14,19 @@ public circularLinkedList()
    count = 0;
 }
  
+@Override
 public int size()
    // post: returns number of elements in list
   {
     return count;
   }
 
-public void addFirst(E value)
+@Override
+public void push(E value)
 // pre: value non-null
 // post: adds element to head of list
 {
-   Node<E> temp = new Node<E>(value);
+   Node<E> temp = new Node<>(value);
    if (tail == null) { // first value added
        tail = temp;
        tail.setNext(tail);
@@ -41,8 +38,9 @@ public void addFirst(E value)
 }
 
     @Override
-    public E getFirst() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public E pop() {
+      tail.setNext(tail);
+      return tail.value();
     }
 
 }

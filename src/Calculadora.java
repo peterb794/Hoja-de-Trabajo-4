@@ -4,14 +4,14 @@
 
 public class Calculadora {
     private Archivo miArchivo;
-    private FactoryStack Stack;
-    private Stack miStack;
+    private FactoryStack<String> Stack;
+    private Stack<String> miStack;
     private String datos, simbolo;
     private int dato1 = 0, dato2= 0, resultado= 0;
     
    public Calculadora (String texto, String num){
     miArchivo = new Archivo (texto);
-    Stack = new FactoryStack();
+    Stack = new FactoryStack<String>();
     miStack = Stack.Factory(num);
     datos = miArchivo.leerArchivo();
 	}
@@ -55,3 +55,7 @@ public class Calculadora {
 		return resultado;
 	}
 }
+
+//Tomado a base de lo visto en: 
+		//http://stackoverflow.com/questions/24725374/java-postfix-calculator-push-pop-method-with-a-string-array
+		//http://stackoverflow.com/questions/7450815/postfix-evaluation-using-stacks

@@ -1,21 +1,21 @@
 /* Andrea Barrera 13655, Peter Benett 13243 */
 /* Seccion 20                               */
 /* Hoja de trabajo 4                        */
-public class FactoryStack<E> {
-      private Stack Stack;
+public class FactoryList<E> {
+     private List list;
     
-      public Stack Factory(String num){
+      public List Factory(String num){
           switch (num) {
               case "1":
-                  Stack = new StackArrayList();
+                  list = new simpleLinkedList();
                   break;
               case "2":
-                  Stack = new StackVector();
+                  list = new doubleLinkedList();
                   break;
               default:
-                  Stack = new StackList();
+                  list = new circularLinkedList();
                   break;
           }
-          return Stack;
+          return list;
    }
 }

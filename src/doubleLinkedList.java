@@ -1,3 +1,6 @@
+/* Andrea Barrera 13655, Peter Benett 13243 */
+/* Seccion 20                               */
+/* Hoja de trabajo 4                        */
 public class doubleLinkedList<E> extends AbstractList<E> {
 
 protected int count;
@@ -18,7 +21,7 @@ public doubleLinkedList()
     return count;
   }
  
-public void addFirst(E value)
+public void push(E value)
 // pre: value is not null
 // post: adds element to head of list
 {
@@ -29,7 +32,7 @@ public void addFirst(E value)
    count++;
 }
 
-public E getFirst()
+public E pop()
   // pre: list is not empty
   // post: returns first value in list
   {

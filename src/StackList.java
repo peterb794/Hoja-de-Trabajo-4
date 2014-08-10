@@ -7,35 +7,39 @@ import java.util.Scanner;
 /* Hoja de trabajo 4                        */
 public class StackList<E> extends AbstractStack<E>  {
 
-    protected LinkedList<E> data;
+    protected LinkedList<E> miList;
     private Scanner s;
-    private int num;
+    private String num;
+    private FactoryList<E> list;
+    private List<E> miLista;
     
     public StackList(){
         System.out.println("ingrese el numero del tipo de lista que desea usar");
-        System.out.println("1. Simple Link\n2.Double Link\n3.Circular Link\n");
+        System.out.println("1.Simple Link\n2.Double Link\n3.Circular Link\n");
         s = new Scanner(System.in);
-        num = s.nextInt();
-	data = new LinkedList<E>();
+        num = s.next();
+        list = new FactoryList<E>();
+        miLista = list.Factory(num);
+	miList = new LinkedList<E>();
     }
     
     @Override
     public void push(E item) {
-        data.add(item);
+        miList.push(item);
     }
 
     @Override
     public E pop() {
-        return data.remove(size()-1);
+        return (E) miList.pop();
     }
 
     @Override
     public E peek() {
-        return data.get(size() - 1);
+        return miList.get(size() - 1);
     }
     @Override
     public int size() {
-        return data.size();
+        return miList.size();
     }
     
-}
+    }
