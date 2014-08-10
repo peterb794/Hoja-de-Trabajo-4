@@ -1,27 +1,49 @@
 /* Andrea Barrera 13655, Peter Benett 13243 */
 /* Seccion 20                               */
 /* Hoja de trabajo 4                        */
+/**
+ *
+ * @author andreabarrera
+ * @param <E>
+ */
 public class circularLinkedList<E> extends AbstractList<E> {
 
-protected Node<E> tail; 
-protected int count;
+    /**
+     *
+     */
+    protected Node<E> tail; 
+    /**
+     *
+     */
+    protected int count;
 private E ne;
 
-public circularLinkedList()
+    /**
+     *
+     */
+    public circularLinkedList()
 // pre: constructs a new circular list
 {
    tail = null;
    count = 0;
 }
  
-@Override
+    /**
+     *
+     * @return
+     */
+    @Override
 public int size()
    // post: returns number of elements in list
   {
     return count;
   }
 
-@Override
+    /**
+     *
+     * @param value
+     */
+    @Override
 public void push(E value)
 // pre: value non-null
 // post: adds element to head of list
@@ -37,6 +59,10 @@ public void push(E value)
    count++;
 }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public E pop() {
       tail.setNext(tail);

@@ -2,6 +2,11 @@
 /* Seccion 20                               */
 /* Hoja de trabajo 4                        */
 import java.io.*;
+/**
+ *
+ * @author andreabarrera
+ * @author peterbennett
+ */
 public class Archivo 
 {
     //ATRIBUTOS
@@ -11,6 +16,10 @@ public class Archivo
 
     //Constructor
     //Busca el archivo y prepara un filereader y bufferreader para poder transformarlo a String
+    /**
+     *
+     * @param texto
+     */
     public Archivo(String texto)
     {
             archivo = new File(texto+".txt");
@@ -36,6 +45,10 @@ public class Archivo
     //Metodo que se encarga de convertir los datos del texto en String
     //Metodo basado en un metodo de Mykong
     //Encontrado en: http://www.mkyong.com/java/how-to-read-file-from-java-bufferedreader-example/
+    /**
+     *
+     * @return
+     */
     public String leerArchivo()
     {
             String datos = new String("");

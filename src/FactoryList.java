@@ -1,10 +1,20 @@
 /* Andrea Barrera 13655, Peter Benett 13243 */
 /* Seccion 20                               */
 /* Hoja de trabajo 4                        */
+/**
+ *
+ * @author andreabarrera
+ * @param <E>
+ */
 public class FactoryList<E> {
      private List list;
     
-      public List Factory(String num){
+      /**
+     *
+     * @param num
+     * @return
+     */
+    public List Factory(String num){
           switch (num) {
               case "1":
                   list = new simpleLinkedList();

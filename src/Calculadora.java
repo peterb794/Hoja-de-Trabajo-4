@@ -2,6 +2,11 @@
 /* Seccion 20                               */
 /* Hoja de trabajo 4                        */
 
+/**
+ *
+ * @author andreabarrera
+ * @author peterbennett
+ */
 public class Calculadora {
     private Archivo miArchivo;
     private FactoryStack<String> Stack;
@@ -9,13 +14,21 @@ public class Calculadora {
     private String datos, simbolo;
     private int dato1 = 0, dato2= 0, resultado= 0;
     
-   public Calculadora (String texto, String num){
+    /**
+     *
+     * @param texto
+     * @param num
+     */
+    public Calculadora (String texto, String num){
     miArchivo = new Archivo (texto);
     Stack = new FactoryStack<String>();
     miStack = Stack.Factory(num);
     datos = miArchivo.leerArchivo();
 	}
-   public void guardar(){
+    /**
+     *
+     */
+    public void guardar(){
       String[] elementos = datos.split(" ");
       int i = elementos.length - 1;
       while(i>=0){
@@ -23,7 +36,11 @@ public class Calculadora {
          i--;
       }
    }
-   public int operaciones()
+    /**
+     *
+     * @return
+     */
+    public int operaciones()
 	{
 		while(miStack.size() > 2)
 		{

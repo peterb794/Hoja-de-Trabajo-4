@@ -3,18 +3,39 @@
 /* Seccion 20                               */
 /* Hoja de trabajo 4                        */
 
-  public interface List<E> {
+  /**
+ *
+ * @author andreabarrera
+ * @param <E>
+ */
+public interface List<E> {
 
-   public int size();
+    /**
+     *
+     * @return
+     */
+    public int size();
    // post: returns number of elements in list
 
-   public boolean isEmpty();
+    /**
+     *
+     * @return
+     */
+    public boolean isEmpty();
    // post: returns true iff list has no elements
 
-   public void push(E value);
+    /**
+     *
+     * @param value
+     */
+    public void push(E value);
    // post: value is added to beginning of list
 
-   public E pop();
+    /**
+     *
+     * @return
+     */
+    public E pop();
    // pre: list is not empty
    // post: returns first value in list
 

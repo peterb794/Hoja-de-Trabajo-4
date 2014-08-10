@@ -1,10 +1,31 @@
+/**
+ *
+ * @author andreabarrera
+ * @author peterbennett
+ * @param <E>
+ */
 public class DoublyLinkedNode<E>{
 
+    /**
+     *
+     */
     protected E data;
+    /**
+     *
+     */
     protected DoublyLinkedNode<E> nextElement;
+    /**
+     *
+     */
     protected DoublyLinkedNode<E> previousElement;
 
-public DoublyLinkedNode(E v, DoublyLinkedNode<E> next, DoublyLinkedNode<E> previous)
+    /**
+     *
+     * @param v
+     * @param next
+     * @param previous
+     */
+    public DoublyLinkedNode(E v, DoublyLinkedNode<E> next, DoublyLinkedNode<E> previous)
 {
     data = v;
     nextElement = next;
@@ -15,20 +36,36 @@ public DoublyLinkedNode(E v, DoublyLinkedNode<E> next, DoublyLinkedNode<E> previ
         previousElement.nextElement = this;
 }
 
-public DoublyLinkedNode(E v)
+    /**
+     *
+     * @param v
+     */
+    public DoublyLinkedNode(E v)
 // post: constructs a single element
 {
     this(v,null,null);
 }
 
-public void setNext(DoublyLinkedNode<E> next){
+    /**
+     *
+     * @param next
+     */
+    public void setNext(DoublyLinkedNode<E> next){
     nextElement = next;
 }
 
-public DoublyLinkedNode<E> previous(){
+    /**
+     *
+     * @return
+     */
+    public DoublyLinkedNode<E> previous(){
     return previousElement;
 }
- public E value()
+    /**
+     *
+     * @return
+     */
+    public E value()
    // post: returns value associated with this element
    {
       return data;

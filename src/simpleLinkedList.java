@@ -1,25 +1,47 @@
 /* Andrea Barrera 13655, Peter Benett 13243 */
 /* Seccion 20                               */
 /* Hoja de trabajo 4                        */
+/**
+ *
+ * @author andreabarrera
+ * @param <E>
+ */
 public class simpleLinkedList<E> extends AbstractList<E> {
     
-   protected int count; // list size
-   protected Node<E> head; // ref. to first element
+    /**
+     *
+     */
+    protected int count; // list size
+    /**
+     *
+     */
+    protected Node<E> head; // ref. to first element
 
-   public simpleLinkedList()
+    /**
+     *
+     */
+    public simpleLinkedList()
    // post: generates an empty list
    {
       head = null;
       count = 0;
    }
    
-   public int size()
+    /**
+     *
+     * @return
+     */
+    public int size()
    // post: returns number of elements in list
   {
     return count;
   }
   
-  public void push(E value)
+    /**
+     *
+     * @param value
+     */
+    public void push(E value)
   // post: value is added to beginning of list
   {
      // note order that things happen:
@@ -28,7 +50,11 @@ public class simpleLinkedList<E> extends AbstractList<E> {
      count++;
   }
   
-   @Override
+    /**
+     *
+     * @return
+     */
+    @Override
   public E pop()
   // pre: list is not empty
   // post: returns first value in list

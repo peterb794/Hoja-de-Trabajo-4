@@ -4,16 +4,31 @@
 
 import java.util.ArrayList;
 
+/**
+ *
+ * @author andreabarrera
+ * @param <E>
+ */
 public class StackArrayList<E> extends AbstractStack<E> {
     
+    /**
+     *
+     */
     protected ArrayList<E> data;
     
 
+    /**
+     *
+     */
     public StackArrayList(){
         // post: constructs a new, empty stack
 	data = new ArrayList<E>();
     }
     
+    /**
+     *
+     * @param item
+     */
     @Override
     // post: the value is added to the stack
 	// will be popped next if no intervening push
@@ -21,6 +36,10 @@ public class StackArrayList<E> extends AbstractStack<E> {
         data.add(item);
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public E pop() {
         // pre: stack is not empty
@@ -28,6 +47,10 @@ public class StackArrayList<E> extends AbstractStack<E> {
         return data.remove(size()-1);
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public E peek()
 	// pre: stack is not empty
@@ -36,6 +59,10 @@ public class StackArrayList<E> extends AbstractStack<E> {
 		return data.get(size() - 1);
 	}
 	
+    /**
+     *
+     * @return
+     */
     @Override
 	public int size()
 	// post: returns the number of elements in the stack
