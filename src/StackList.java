@@ -1,5 +1,6 @@
 
 import java.util.LinkedList;
+import java.util.Scanner;
 
 /* Andrea Barrera 13655, Peter Benett 13243 */
 /* Seccion 20                               */
@@ -7,8 +8,14 @@ import java.util.LinkedList;
 public class StackList<E> extends AbstractStack<E>  {
 
     protected LinkedList<E> data;
+    private Scanner s;
+    private int num;
     
     public StackList(){
+        System.out.println("ingrese el numero del tipo de lista que desea usar");
+        System.out.println("1. Simple Link\n2.Double Link\n3.Circular Link\n");
+        s = new Scanner(System.in);
+        num = s.nextInt();
 	data = new LinkedList<E>();
     }
     
